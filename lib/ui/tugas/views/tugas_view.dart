@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kelarin_hackjam/core/constants/app_colors.dart';
 import 'package:kelarin_hackjam/core/constants/app_textstyle.dart';
 import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_search_field.dart';
 import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_filter_chip.dart';
 import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_card.dart';
+import 'package:kelarin_hackjam/ui/tugas/viewmodel/tugas_vm.dart';
 
-class TugasView extends StatelessWidget {
+class TugasView extends ConsumerWidget {
   const TugasView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final tugasState = ref.watch(tugasViewModelProvider);
+    final tugasNotifier = ref.read(tugasViewModelProvider.notifier);
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
@@ -35,12 +40,10 @@ class TugasView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-
               const TugasSearchField(),
               const SizedBox(height: 12),
               const TugasFilterChip(),
               const SizedBox(height: 20),
-
               Expanded(
                 child: ListView(
                   children: const [
