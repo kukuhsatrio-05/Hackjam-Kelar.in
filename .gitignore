@@ -45,4 +45,6 @@ app.*.map.json
 /android/app/release
 
 # API related
-.env
+*.env
+api_related.env
+assets/env
