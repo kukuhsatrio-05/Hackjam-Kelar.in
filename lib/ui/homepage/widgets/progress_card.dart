@@ -24,8 +24,8 @@ class BerandaProgressCard extends StatelessWidget {
           margin: const EdgeInsets.only(top: 24),
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: const Color(0xFFEBF3FC),
-            borderRadius: BorderRadius.circular(20),
+            color: AppColors.lightHover,
+            borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,7 @@ class BerandaProgressCard extends StatelessWidget {
                   color: AppColors.darkActive,
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Expanded(
@@ -46,23 +46,18 @@ class BerandaProgressCard extends StatelessWidget {
                         Text(
                           '$completedTasks / $totalTasks',
                           style:
-                              AppTextStyle.headingBold.copyWith(fontSize: 22),
+                              AppTextStyle.headingBold.copyWith(fontSize: 24),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           'Tugas Selesai',
                           style: AppTextStyle.bodyMedium.copyWith(
-                            fontSize: 12,
-                            color: AppColors.textSecondary,
+                            fontSize: 13,
+                            color: AppColors.textPrimary,
                           ),
                         ),
                       ],
                     ),
-                  ),
-                  Container(
-                    width: 1,
-                    height: 40,
-                    color: AppColors.lightHover,
                   ),
                   Expanded(
                     child: Column(
@@ -70,14 +65,14 @@ class BerandaProgressCard extends StatelessWidget {
                         Text(
                           '${clientMeetings}x',
                           style:
-                              AppTextStyle.headingBold.copyWith(fontSize: 22),
+                              AppTextStyle.headingBold.copyWith(fontSize: 24),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           'Ketemu Klien',
                           style: AppTextStyle.bodyMedium.copyWith(
-                            fontSize: 12,
-                            color: AppColors.textSecondary,
+                            fontSize: 13,
+                            color: AppColors.textPrimary,
                           ),
                         ),
                       ],
@@ -89,13 +84,14 @@ class BerandaProgressCard extends StatelessWidget {
           ),
         ),
 
+        // Maskot Icon
         Positioned(
-          top: -15,
+          top: -40, // Naik ekstrim untuk menimpa bubble chat
           right: 12,
           child: Image.asset(
             'assets/icons/mascot_icon.png',
-            width: 80,
-            height: 80,
+            width: 110,
+            height: 110,
           ),
         ),
       ],

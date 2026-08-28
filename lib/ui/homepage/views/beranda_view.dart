@@ -25,7 +25,30 @@ class BerandaView extends ConsumerWidget {
             children: [
               const SizedBox(height: 16),
               const BerandaHeader(),
-              const SizedBox(height: 44),
+              const SizedBox(height: 24),
+
+              // BUBBLE CHAT
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: AppColors.surface,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: AppColors.lightActive),
+                  ),
+                  child: Text(
+                    'Haii, siap untuk mulai hari ini?',
+                    style: AppTextStyle.bodySemiBold.copyWith(
+                      fontSize: 13,
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 4),
 
               // Progress Widget
               BerandaProgressCard(
@@ -52,7 +75,7 @@ class BerandaView extends ConsumerWidget {
               // List Card Items
               BerandaTaskCard(
                 priorityLabel: 'Prioritas tinggi',
-                priorityColor: const Color(0xFFEF4444), // Merah
+                priorityColor: const Color(0xFFEF4444),
                 title: 'Laporan Keuangan',
                 description: 'Lorem ipsum dolor sit amet',
                 category: 'Laporan',
@@ -60,7 +83,7 @@ class BerandaView extends ConsumerWidget {
               ),
               BerandaTaskCard(
                 priorityLabel: 'Prioritas sedang',
-                priorityColor: const Color(0xFFB45309), // Oranye/Kuning
+                priorityColor: const Color(0xFFB45309),
                 title: 'Buat PRD',
                 description: 'Lorem ipsum dolor sit amet',
                 category: '#Laporan',

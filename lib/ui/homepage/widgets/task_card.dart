@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kelarin_hackjam/core/constants/app_colors.dart';
 import 'package:kelarin_hackjam/core/constants/app_textstyle.dart';
+import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_bottom_sheet.dart';
 
 class BerandaTaskCard extends StatelessWidget {
   final String title;
@@ -29,7 +30,23 @@ class BerandaTaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (context) => TugasDetailBottomSheet(
+            title: title,
+            description: description,
+            dueDate: dueDate,
+            priorityLabel: priorityLabel,
+            priorityColor: priorityColor,
+            clientAvatarUrl: clientAvatarUrl,
+          ),
+        );
+
+        if (onTap != null) onTap!();
+      },
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
         padding: const EdgeInsets.all(16),

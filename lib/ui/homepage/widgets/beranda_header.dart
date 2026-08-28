@@ -20,7 +20,7 @@ class BerandaHeader extends StatelessWidget {
         const CircleAvatar(
           radius: 18,
           backgroundColor: AppColors.lightActive,
-          child: Icon(Icons.person, color: AppColors.darker),
+          child: Icon(Icons.person, color: AppColors.textSecondary),
         ),
       ],
     );

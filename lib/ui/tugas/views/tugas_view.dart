@@ -5,15 +5,15 @@ import 'package:kelarin_hackjam/core/constants/app_textstyle.dart';
 import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_search_field.dart';
 import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_filter_chip.dart';
 import 'package:kelarin_hackjam/ui/tugas/widgets/tugas_card.dart';
-import 'package:kelarin_hackjam/ui/tugas/viewmodel/tugas_vm.dart';
+// import 'package:kelarin_hackjam/ui/tugas/viewmodel/tugas_vm.dart';
 
 class TugasView extends ConsumerWidget {
   const TugasView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final tugasState = ref.watch(tugasViewModelProvider);
-    final tugasNotifier = ref.read(tugasViewModelProvider.notifier);
+    // final tugasState = ref.watch(tugasViewModelProvider);
+    // final tugasNotifier = ref.read(tugasViewModelProvider.notifier);
 
     return Scaffold(
       backgroundColor: AppColors.background,
