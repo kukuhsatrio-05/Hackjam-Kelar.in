@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:kelarin_hackjam/core/constants/app_colors.dart';
 import 'package:kelarin_hackjam/core/constants/app_textstyle.dart';
 import 'package:kelarin_hackjam/ui/capture_ai/models/task_result.dart';
-import 'package:kelarin_hackjam/ui/capture_ai/services/gemini_services.dart';
+import 'package:kelarin_hackjam/services/gemini_services.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class InputTugasBaruView extends ConsumerStatefulWidget {

@@ -29,7 +29,7 @@ class TugasDetailBottomSheet extends StatelessWidget {
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.min, // Agar tinggi menyesuaikan konten
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Drag Handle
@@ -45,7 +45,7 @@ class TugasDetailBottomSheet extends StatelessWidget {
             ),
           ),
 
-          // Priority Label (Opsional jika ada)
+          // Priority Label
           if (priorityLabel != null) ...[
             Text(
               priorityLabel!,
@@ -81,9 +81,8 @@ class TugasDetailBottomSheet extends StatelessWidget {
                 icon: const Icon(Icons.more_vert, color: AppColors.textPrimary),
                 onSelected: (value) {
                   if (value == 'delete') {
-                    // TODO: Tambahkan logika Riverpod/ViewModel untuk menghapus tugas di sini
-                    Navigator.pop(
-                        context); // Tutup bottom sheet setelah klik hapus
+                    // Tambahkan logika Riverpod/ViewModel untuk menghapus tugas di sini
+                    Navigator.pop(context);
                   }
                 },
                 itemBuilder: (BuildContext context) => [
@@ -108,7 +107,7 @@ class TugasDetailBottomSheet extends StatelessWidget {
           ),
           const SizedBox(height: 16),
 
-          // Client Section (Opsional jika ini tugas meeting)
+          // Client Section
           if (clientAvatarUrl != null) ...[
             Row(
               children: [
@@ -129,7 +128,7 @@ class TugasDetailBottomSheet extends StatelessWidget {
             const SizedBox(height: 16),
           ],
 
-          // Description (Menggunakan dummy text panjang sesuai desain)
+          // Description
           Text(
             'Lorem ipsum dolor sit amet consectetur. Massa est diam dolor mauris. At diam amet pulvinar nascetur amet at adipiscing aliquam. Felis libero gravida felis morbi. Lobortis duis lectus lacus velit.',
             style: AppTextStyle.bodyRegular.copyWith(

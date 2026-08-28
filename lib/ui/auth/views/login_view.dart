@@ -100,7 +100,7 @@ class LoginView extends ConsumerWidget {
                         alignment: Alignment.centerLeft,
                         child: GestureDetector(
                           onTap: () {
-                            // TODO: Navigasi/Action Lupa Password
+                            // Navigasi/Action Lupa Password
                           },
                           child: Text(
                             'Lupa Password?',
@@ -123,7 +123,7 @@ class LoginView extends ConsumerWidget {
                               : () async {
                                   final isSuccess = await viewModel.login();
                                   if (isSuccess && context.mounted) {
-                                    // TODO: Navigasi ke Beranda / HomeView
+                                    // Navigasi ke Beranda / HomeView
                                   }
                                 },
                           style: ElevatedButton.styleFrom(
@@ -164,7 +164,7 @@ class LoginView extends ConsumerWidget {
                                   final isSuccess =
                                       await viewModel.signInWithGoogle();
                                   if (isSuccess && context.mounted) {
-                                    // TODO: Navigasi ke Beranda / HomeView
+                                    // Navigasi ke Beranda / HomeView
                                   }
                                 },
                           style: OutlinedButton.styleFrom(
@@ -216,7 +216,7 @@ class LoginView extends ConsumerWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // TODO: Navigasi ke RegisterView
+                        // Navigasi ke RegisterView
                       },
                       child: Text(
                         'Register',
