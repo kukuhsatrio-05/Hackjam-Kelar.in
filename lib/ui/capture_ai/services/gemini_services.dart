@@ -9,7 +9,7 @@ class GeminiService {
 
   GeminiService({String? apiKey})
       : _model = GenerativeModel(
-          model: 'gemini-1.5-flash',
+          model: 'gemini-3.1-pro',
           apiKey: apiKey ?? dotenv.env['GEMINI_API_KEY'] ?? '',
           generationConfig: GenerationConfig(
             responseMimeType: 'application/json',

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="kelarin_hackjam"
-        android:name="${applicationName}"
+        android:label="kelarin"
+        android:name="${kelarinhackjam}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
