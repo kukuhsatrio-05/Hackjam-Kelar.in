@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kelarin_hackjam/core/constants/app_colors.dart';
 import 'package:kelarin_hackjam/core/constants/app_textstyle.dart';
+import 'package:kelarin_hackjam/core/router/app_router.dart';
 
 class CaptureSelectionView extends StatelessWidget {
   const CaptureSelectionView({super.key});
@@ -16,7 +17,9 @@ class CaptureSelectionView extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new, color: AppColors.darker),
-          onPressed: () => context.pop(),
+          onPressed: () {
+            context.pushNamed('inputTugas');
+          },
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

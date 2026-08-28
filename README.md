@@ -6,7 +6,7 @@
 
 ## 📌 Fitur Utama
 
-- 🤖 **AI Task Capture**: Ekstraksi tugas otomatis dari foto, instruksi teks, atau catatan menggunakan **Gemini 2.0 Flash**.
+- 🤖 **AI Task Capture**: Ekstraksi tugas otomatis dari foto, instruksi teks, atau catatan menggunakan **Gemini 3.6 Flash**.
 - 📅 **Smart Scheduling**: Perhitungan _deadline_ tanggal relatif secara otomatis (seperti "besok", "lusa", atau "minggu depan").
 - ⚡ **Priority & Stakeholder Detection**: AI mengenali prioritas tugas (_High_, _Medium_, _Low_) serta pihak terkait (_stakeholder_).
 - 📊 **Task Management**: Pengelolaan status dan daftar tugas yang terstruktur.

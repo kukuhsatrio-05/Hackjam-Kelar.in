@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // import 'core/router/app_router.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:kelarin_hackjam/core/router/app_router.dart';
 import 'package:kelarin_hackjam/ui/homepage/views/beranda_view.dart';
 import 'package:kelarin_hackjam/ui/auth/views/login_view.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -27,13 +28,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Kelarin Hackjam',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const CaptureSelectionView(),
+      routerConfig: AppRouter.router,
     );
   }
 }

@@ -10,7 +10,7 @@ class GeminiService {
   GeminiService({String? apiKey})
       : _model = GenerativeModel(
           // 1. Gunakan gemini-1.5-flash untuk kecepatan ekstraksi JSON (kecepatan tinggi)
-          model: 'gemini-2.0-flash',
+          model: 'gemini-3.6-flash',
           apiKey: apiKey ?? dotenv.env['GEMINI_API_KEY'] ?? '',
           generationConfig: GenerationConfig(
             responseMimeType: 'application/json',
